@@ -1,0 +1,12 @@
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+img {
+    height: auto;
+    width: 50px;
+}

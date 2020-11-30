@@ -1,0 +1,16 @@
+.start-container {
+    min-height: 80vh;
+    width: 70%;
+    background: #FEFEFE;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.blockchain {
+    width: 400px;
+    height: auto;
+}
+
