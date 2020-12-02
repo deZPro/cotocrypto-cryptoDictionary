@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/cotocrypto-cryptoDictionary/static/css/main.ffba60b3.chunk.css",
+    "main.js": "/cotocrypto-cryptoDictionary/static/js/main.d573fcf3.chunk.js",
+    "main.js.map": "/cotocrypto-cryptoDictionary/static/js/main.d573fcf3.chunk.js.map",
+    "runtime-main.js": "/cotocrypto-cryptoDictionary/static/js/runtime-main.bb68d633.js",
+    "runtime-main.js.map": "/cotocrypto-cryptoDictionary/static/js/runtime-main.bb68d633.js.map",
+    "static/js/2.e0e999fb.chunk.js": "/cotocrypto-cryptoDictionary/static/js/2.e0e999fb.chunk.js",
+    "static/js/2.e0e999fb.chunk.js.map": "/cotocrypto-cryptoDictionary/static/js/2.e0e999fb.chunk.js.map",
+    "index.html": "/cotocrypto-cryptoDictionary/index.html",
+    "static/css/main.ffba60b3.chunk.css.map": "/cotocrypto-cryptoDictionary/static/css/main.ffba60b3.chunk.css.map",
+    "static/js/2.e0e999fb.chunk.js.LICENSE.txt": "/cotocrypto-cryptoDictionary/static/js/2.e0e999fb.chunk.js.LICENSE.txt",
+    "static/media/blockchain.a3345b2e.png": "/cotocrypto-cryptoDictionary/static/media/blockchain.a3345b2e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bb68d633.js",
+    "static/js/2.e0e999fb.chunk.js",
+    "static/css/main.ffba60b3.chunk.css",
+    "static/js/main.d573fcf3.chunk.js"
+  ]
+}
