@@ -9,9 +9,9 @@ function StartContainer() {
         <div className="start-container">
             <h1>Witaj</h1>
             <button>
-               <Link to="/DictionaryContainer">Rozpocznij wyszukiwanie!</Link>
+                <Link to="/DictionaryContainer">Rozpocznij wyszukiwanie!</Link>
             </button>
-            <img className ="blockchain" src={BlockchainImage} />
+            <img className="blockchain" src={BlockchainImage} />
         </div>
     )
 }

@@ -6,7 +6,7 @@ ul li {
     list-style-type: none;
 }
 
-img {
+ul li img {
     height: auto;
     width: 50px;
 }

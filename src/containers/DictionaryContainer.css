@@ -8,11 +8,17 @@
     flex-direction: column;
 }
 
-.container ul {
+.container div {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     align-items: flex-start;
- 
+    justify-content: center;
+
 }
 
+.container div ul li .name {
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-decoration-color: #F7931A;
+}

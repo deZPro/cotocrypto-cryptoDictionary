@@ -3,3 +3,7 @@
     width: 100%;
     background: #FEFEFE;
 }
+
+.footer .github-text {
+    font-size: 0.8em;
+}
