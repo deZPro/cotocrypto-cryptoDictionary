@@ -8,17 +8,18 @@
     flex-direction: column;
 }
 
-.container div {
+.container .wrap {
     display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: flex-start;
-    justify-content: center;
-
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    text-align: center;
+    cursor: pointer;
 }
 
-.container div ul li .name {
-    font-size: 1.2em;
-    text-decoration: underline;
-    text-decoration-color: #F7931A;
+.container .dropdown {
+    width: 70%;
+    padding-top: 10px;
 }
+
+

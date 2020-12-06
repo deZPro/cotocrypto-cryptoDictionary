@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import './DictionaryContainer.css';
 import { Link } from 'react-router-dom';
-
-
+import { IconContext } from 'react-icons';
+import { FiPlus, FiMinus } from 'react-icons/fi';
 
 function DictionaryContainer() {
     const [searchTerm, setSearchTerm] = useState("");
+    const [clicked, setClicked] = useState(false)
 
     let cryptoData = [
         { name: "Bitcoin", description: "Bitcoin is a digital currency created in January 2009 following the housing market crash. It follows the ideas set out in a whitepaper by the mysterious and pseudonymous Satoshi..." },
@@ -26,6 +27,14 @@ function DictionaryContainer() {
             return i.name.toLowerCase().match(searchTerm);
         })
     }
+
+    const toggle = index => {
+        if (clicked === index) {
+            return setClicked(null)
+        }
+        setClicked(index)
+    }
+
     return (
         <div className="container">
             <h1>Rozpocznij zabawę ze słownkiem!</h1>
@@ -41,17 +50,21 @@ function DictionaryContainer() {
             />
             {cryptoData.map((item, index) => {
                 return (
-                    <div key={index}>
-                        <ul>
-                            <li>
-                                <span className="name">{item.name}</span>
-                                <span className="description"> - {item.description}</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <IconContext.Provider value={{ size: '25px' }}>
+                        <>
+                            <div className="wrap" onClick={() => toggle(index)} key={index}>
+                                <h1 className="name">{item.name}</h1>
+                                <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                            </div>
+                            {clicked === index ? (
+                                <div className="dropdown">
+                                    <p className="description">{item.description}</p>
+                                </div>
+                            ) : null}
+                        </>
+                    </IconContext.Provider>
                 )
             })}
-
         </div>
     )
 }

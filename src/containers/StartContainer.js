@@ -3,7 +3,6 @@ import './StartContainer.css';
 import { Link } from 'react-router-dom';
 import BlockchainImage from '../images/blockchain.png'
 
-
 function StartContainer() {
     return (
         <div className="start-container">
