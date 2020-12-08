@@ -7,22 +7,3 @@
     font-family: 'Caveat', cursive;
 }
 
-.navbar .logo-navbar {
-    display: flex;
-    align-items: center;
-}
-
-.navbar .logo-navbar .book-logo {
-    width: 40px;
-    height: auto;
-}
-
-.navbar .logo-navbar .logo-grey {
-    font-size: 30px;
-    color: #4B4B4B;
-}
-
-.navbar .logo-navbar .logo-orange {
-    font-size: 30px;
-    color: #ff9900;
-}

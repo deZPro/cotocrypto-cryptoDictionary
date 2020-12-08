@@ -36,6 +36,7 @@ function DictionaryContainer() {
     }
 
     return (
+
         <div className="container">
             <h1>Rozpocznij zabawę ze słownkiem!</h1>
             <button>
@@ -50,7 +51,7 @@ function DictionaryContainer() {
             />
             {cryptoData.map((item, index) => {
                 return (
-                    <IconContext.Provider value={{ size: '25px' }}>
+                    <IconContext.Provider value={{ color: "ff9900", size: '25px' }}>
                         <>
                             <div className="wrap" onClick={() => toggle(index)} key={index}>
                                 <h1 className="name">{item.name}</h1>
@@ -66,6 +67,7 @@ function DictionaryContainer() {
                 )
             })}
         </div>
+
     )
 }
 

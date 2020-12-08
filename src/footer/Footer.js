@@ -15,6 +15,7 @@ function Footer() {
                     Contact us! <FiMail />
                 </a>
             </span>
+            <span className="github-text">&copy; {1900 + new Date().getYear()} by dZ</span>
         </div>
     )
 }

@@ -1,0 +1,14 @@
+.logo-navbar {
+    display: flex;
+    align-items: center;
+}
+
+.logo-navbar .logo-grey {
+    font-size: 30px;
+    color: #4B4B4B;
+}
+
+.logo-navbar .logo-orange {
+    font-size: 30px;
+    color: #ff9900;
+}
