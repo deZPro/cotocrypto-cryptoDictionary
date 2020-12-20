@@ -1,16 +1,60 @@
 .start-container {
     font-family: 'Montserrat', sans-serif;
     min-height: 80vh;
-    width: 70%;
-    background: #FEFEFE;
+    max-width: 1200px;
     border-radius: 4px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap-reverse;
 }
 
-.blockchain {
+.start-container .card {
+    width: 400px;
+    height: 300px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: cnter;
+    align-items: center;
+}
+
+.start-container .card .card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.start-container .card .card-content h1 {
+    color: #fff;
+}
+
+.start-container .card .card-content h3 {
+    color: #fff;
+}
+
+.start-container .card .card-content .button {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.start-container .card .card-content .button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+
+.start-container .blockchain {
     width: 400px;
     height: auto;
 }

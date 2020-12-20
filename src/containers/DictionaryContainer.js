@@ -22,6 +22,11 @@ function DictionaryContainer() {
         setSearchTerm(e.target.value);
     };
 
+    const handleReset = e => {
+        e.preventDefault();
+        setSearchTerm("");
+    }
+
     if (searchTerm.length > 0) {
         cryptoData = cryptoData.filter((i) => {
             return i.name.toLowerCase().match(searchTerm);
@@ -36,12 +41,16 @@ function DictionaryContainer() {
     }
 
     return (
-
         <div className="container">
             <h1>Rozpocznij zabawę ze słownkiem!</h1>
-            <button>
-                <Link to="/">Powrót</Link>
-            </button>
+            <div className="buttons-card">
+                <button className="button">
+                    <Link to="/">Powrót</Link>
+                </button>
+                <button className="button" onClick={handleReset}>
+                    <a href="#">Wyczyść</a>
+                </button>
+            </div>
             <br></br>
             <input
                 type="text"

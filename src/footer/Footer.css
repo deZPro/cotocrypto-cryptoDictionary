@@ -2,7 +2,6 @@
     font-family: 'Montserrat', sans-serif;
     min-height: 10vh;
     width: 100%;
-    background: #FEFEFE;
     display: flex;
     flex-direction: column;
 }

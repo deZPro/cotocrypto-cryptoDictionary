@@ -1,7 +1,6 @@
 .navbar {
     min-height: 10vh;
     width: 100%;
-    background: #FEFEFE;
     display: flex;
     justify-content: space-around;
     font-family: 'Caveat', cursive;
