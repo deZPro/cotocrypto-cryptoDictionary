@@ -3,9 +3,180 @@
     min-height: 10vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #212121, #424242);
+    top: -5px;
+    left: 0;
 }
 
 .footer .github-text {
     font-size: 0.8em;
+    color: #424242;
+}
+
+.footer .github-text a {
+    text-decoration: none;
+    color: #424242;
+}
+
+.footer .github-text a:hover {
+    color: #DDDDDE;
+}
+
+.Modal {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    right: 80px;
+    bottom: 80px;
+    background-color: #212121;
+    border-radius: 15px;
+    outline: none;
+    color: #DDDDDE;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(255, 255, 255, 0.75); */
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Modal .modal-div {
+    width: 100%;
+    height: 100%;
+}
+
+.Modal .modal-div .modal-exit {
+    width: 100%;
+    height: 10%;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Modal .modal-div .modal-exit button {
+    padding: 5px;
+    border: none;
+    background: none;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #DDDDDE;
+    box-sizing: border-box;
+}
+
+.Modal .modal-div .modal-exit button:hover {
+    color: #ff9900;
+}
+
+.Modal .modal-div .modal-header {
+    width: 100%;
+    height: 10%;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal .modal-div .modal-header h1 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.Modal .modal-div .modal-paragraph {
+    width: 100%;
+    min-height: 10%;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 15px;
+}
+
+.Modal .modal-div .modal-paragraph p {
+    font-size: 1.1rem;
+}
+
+.Modal .modal-div .modal-qrcode {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Modal .modal-div .modal-qrbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Modal .modal-div .modal-qrbox .qr-code {
+    max-width: 70%;
+    height: auto;
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+@media screen and (max-width: 665px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding-left: 5%;
+        padding-right: 0;
+        padding-top: 15px;
+        /* padding-bottom: 15px; */
+    }
+    .footer .github-text {
+        padding-bottom: 15px;
+    }
+    .Modal {
+        top: 25px;
+        right: 25px;
+        bottom: 25px;
+        left: 25px;
+    }
+    .Modal .modal-div .modal-header h1 {
+        font-size: 1.3rem;
+    }
+    .Modal .modal-div .modal-paragraph p {
+        font-size: 0.9rem;
+    }
+    .Modal .modal-div .modal-qrbox .qr-code {
+        max-width: 60%;
+        height: auto;
+    }
 }

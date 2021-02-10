@@ -8,7 +8,7 @@ function Navbar() {
         <div className="navbar">
             <Navlogo />
             <Navcoins />
-        </div>    
+        </div>
     )
 }
 

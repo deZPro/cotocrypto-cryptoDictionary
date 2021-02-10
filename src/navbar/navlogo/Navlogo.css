@@ -1,14 +1,41 @@
 .logo-navbar {
     display: flex;
     align-items: center;
+    padding-right: 40px;
+}
+
+.logo-navbar .logo-photo {
+    height: auto;
+    width: 45px;
 }
 
 .logo-navbar .logo-grey {
     font-size: 30px;
-    color: #4B4B4B;
+    color: #DDDDDE
 }
 
 .logo-navbar .logo-orange {
     font-size: 30px;
     color: #ff9900;
+}
+
+@media screen and (max-width: 665px) {
+    .logo-navbar {
+        width: 100%;
+        padding-left: 5%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .logo-navbar .logo-photo {
+        width: 35px;
+    }
+
+    .logo-navbar .logo-grey {
+        font-size: 25px;
+    }
+    
+    .logo-navbar .logo-orange {
+        font-size: 25px;
+    }
 }
