@@ -11,6 +11,8 @@ function DictionaryContainer() {
     const [clicked, setClicked] = useState(false)
 
     let cryptoData = [
+        //A
+        { name: "Airdrop", description: "Airdrop to darmowy zrzut kryptowaluty w formie prezentu. Zrzut najczęściej otrzymywany jest z racji posiadania innej kryptowaluty na swoim portfelu lub za wykonanie określonych zadań w mediach społecznościowych." },
         //B
         { name: "Bitcoin (BTC)", description: "Bitcoin (BTC) is a digital currency created in January 2009 following the housing market crash. It follows the ideas set out in a whitepaper by the mysterious and pseudonymous Satoshi..." },
         { name: "Blockchain", description: "A system in which a record of transactions made in bitcoin or another cryptocurrency are maintained across several computers that are linked in a peer-to-peer network..." },
@@ -46,7 +48,7 @@ function DictionaryContainer() {
 
     if (searchTerm.length > 0) {
         cryptoData = cryptoData.filter((i) => {
-            return i.name.toLowerCase().match(searchTerm);
+            return i.name.toLowerCase().match(searchTerm.toLowerCase());
         })
     }
 

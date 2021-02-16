@@ -7,11 +7,16 @@ import QrBtc from '../images/qr-btc.svg'
 import './Footer.css';
 import Modal from 'react-modal';
 import { motion } from 'framer-motion';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 Modal.setAppElement('#root');
 
 function Footer() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const handleCopy = () => {
+        console.log('skopiowano!');
+    }
     return (
         <div className="footer">
             <motion.span className="github-text" onClick={() => setModalIsOpen(true)}
@@ -35,21 +40,21 @@ function Footer() {
                             <h1>O projekcie <FaRegHandPeace /></h1>
                         </div>
                         <div className="modal-paragraph">
-                            <p>cotocrypto.pl to projekt  który ma za zadanie edukować młodych adeptów rynku jak i starych wyjadaczy w zakresie słownictwa powiązanego z technolgią bockchain oraz kryptowalutami.</p>
+                            <p><span className="logo-grey">cotocrypto</span><span className="logo-orange">.pl  </span>to projekt który ma za zadanie edukować początkujących oraz doświadczonych uczestników rynku w zakresie słownictwa powiązanego z technolgią bockchain oraz kryptowalutami.</p>
                         </div>
                         <div className="modal-header">
                             <h1>Wspomóż projekt<IoLogoBitcoin /></h1>
                         </div>
                         <div className="modal-paragraph">
-                            <p>Jeśli podoba się Tobie inicjatywa i chciałbyś pomóc w rozwoju projektu, to możesz dofinansować inicjatywę</p>
+                            <p>Jeśli podoba się Tobie projekt i chciałbyś pomóc w rozwoju, to możesz dofinansować inicjatywę przelewając Satoshi. Projekt również jest zweryfikowanym wydawcą przeglądarki Brave.</p>
                         </div>
                         <div className="modal-qrcode">
                             <div className="modal-qrbox">
                                 <img className="qr-code" src={QrBtc} />
-                        BTC ADRESS
-                        <form>
-                                    <input value="bc1qu7pdy94mt86fpaxcvslhtnfmz5ht7x2p4gu334" />
-                                </form>
+                                <span class="btcadress-header">ADRES BTC:</span>
+                                <CopyToClipboard text="bc1qd5030jzt94rx9em8c5790m3h8aswqxz7vwwuwz" onCopy={handleCopy}>
+                                    <span class="btcadress-adress">bc1qd5030jzt94rx9em8c5790m3h8aswqxz7vwwuwz</span>
+                                </CopyToClipboard>
                             </div>
                         </div>
                     </IconContext.Provider>

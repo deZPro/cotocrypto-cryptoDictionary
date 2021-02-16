@@ -208,7 +208,8 @@
 
 .container .words-box .dropdown {
     width: 70%;
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .container .words-box .dropdown p {
