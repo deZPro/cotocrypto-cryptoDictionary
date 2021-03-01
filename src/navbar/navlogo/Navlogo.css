@@ -26,15 +26,12 @@
         align-items: center;
         justify-content: flex-start;
     }
-
     .logo-navbar .logo-photo {
         width: 35px;
     }
-
     .logo-navbar .logo-grey {
         font-size: 25px;
     }
-    
     .logo-navbar .logo-orange {
         font-size: 25px;
     }

@@ -2,8 +2,13 @@
     min-height: 10vh;
     width: 100%;
     display: flex;
-    padding-top: 15px;
     justify-content: space-around;
     flex-wrap: wrap;
     font-family: 'Caveat', cursive;
+}
+
+@media screen and (max-width: 665px) {
+    .navbar {
+        margin-top: 15px;
+    }
 }

@@ -217,6 +217,10 @@
     .start-container .left .card p {
         font-size: 0.9rem;
     }
+    .start-container .left .card a {
+        padding: 8px 25px;
+        font-size: 13px;
+    }
     .start-container .right {
         /* padding-top: 20px; */
         margin-top: 25px;

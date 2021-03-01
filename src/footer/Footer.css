@@ -38,6 +38,9 @@
 
 .Modal {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 80px;
     left: 80px;
     right: 80px;
@@ -55,13 +58,24 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: rgba(255, 255, 255, 0.75); */
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 .Modal .modal-div {
-    width: 100%;
+    width: 96%;
     height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.Modal .modal-div::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.Modal .modal-div::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #212121, #424242);
+    border-radius: 5px;
 }
 
 .Modal .modal-div .modal-exit {
@@ -130,7 +144,7 @@
 
 .Modal .modal-div .modal-qrcode {
     width: 100%;
-    height: 45%;
+    min-height: 45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -143,21 +157,33 @@
 }
 
 .Modal .modal-div .modal-qrbox .qr-code {
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
 }
 
 .Modal .modal-div .modal-qrbox .btcadress-header {
-    padding-top: 10px;
+    padding-top: 12px;
     color: #424242;
     font-size: 15px;
 }
 
 .Modal .modal-div .modal-qrbox .btcadress-adress {
-    padding-top: 10px;
+    padding-top: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
     color: #DDDDDE;
     font-size: 10px;
     letter-spacing: 1px
+}
+
+.Modal .modal-div .modal-qrbox button {
+    margin-top: 5px;
+    background: none;
+    border: none;
+    color: #ff9900;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .ReactModal__Overlay {
@@ -171,34 +197,6 @@
 
 .ReactModal__Overlay--before-close {
     opacity: 0;
-}
-
-@media screen and (max-width: 970px) {
-    .Modal {
-        top: 35px;
-        right: 35px;
-        bottom: 35px;
-        left: 35px;
-    }
-    .Modal .modal-div .modal-header h1 {
-        font-size: 1.4rem;
-    }
-    .Modal .modal-div .modal-paragraph p {
-        font-size: 1rem;
-    }
-    .Modal .modal-div .modal-paragraph p span {
-        font-size: 1.6rem;
-    }
-    /* .Modal .modal-div .modal-qrbox .qr-code {
-        max-width: 40%;
-        height: auto;
-    } */
-    .Modal .modal-div .modal-qrbox .btcadress-header {
-        font-size: 12px;
-    }
-    .Modal .modal-div .modal-qrbox .btcadress-adress {
-        font-size: 12px;
-    }
 }
 
 @media screen and (max-width: 665px) {
@@ -219,6 +217,12 @@
         bottom: 25px;
         left: 25px;
     }
+    .Modal .modal-div {
+        width: 94%;
+    }
+    .Modal .modal-div::-webkit-scrollbar {
+        width: 5px;
+    }
     .Modal .modal-div .modal-header h1 {
         font-size: 1.3rem;
     }
@@ -228,14 +232,29 @@
     .Modal .modal-div .modal-paragraph p span {
         font-size: 1.5rem;
     }
-    /* .Modal .modal-div .modal-qrbox .qr-code {
-        max-width: 40%;
+    .Modal .modal-div .modal-qrbox .qr-code {
+        max-width: 35%;
         height: auto;
-    } */
-    .Modal .modal-div .modal-qrbox .btcadress-header {
-        font-size: 10px;
     }
     .Modal .modal-div .modal-qrbox .btcadress-adress {
-        font-size: 10px;
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .Modal .modal-div .modal-header h1 {
+        font-size: 1.1rem;
+    }
+    .Modal .modal-div .modal-paragraph p {
+        font-size: 0.7rem;
+    }
+    .Modal .modal-div .modal-paragraph p span {
+        font-size: 1.3rem;
+    }
+    .Modal .modal-div .modal-qrbox .btcadress-header {
+        font-size: 12px;
+    }
+    .Modal .modal-div .modal-qrbox .btcadress-adress {
+        font-size: 6px;
     }
 }

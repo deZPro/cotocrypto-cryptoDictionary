@@ -110,7 +110,8 @@
 }
 
 .container .form {
-    width: 50%;
+    width: 80%;
+    max-width: 1000px;
     position: relative;
     height: 50px;
     overflow: hidden;
@@ -123,7 +124,7 @@
     color: #595f6e;
     padding-top: 20px;
     border: none;
-    background: #212121;
+    background: none;
     outline: none;
 }
 
@@ -153,6 +154,7 @@
     position: absolute;
     bottom: 5px;
     left: 0;
+    font-size: 16px;
     transition: all 0.3s ease;
 }
 
@@ -170,12 +172,18 @@
 .container .words-box {
     height: 50vh;
     width: 80%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 1000px;
     border-radius: 4px;
     display: flex;
     align-items: center;
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 .container .words-box::-webkit-scrollbar {
@@ -185,7 +193,7 @@
 }
 
 .container .words-box::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #212121, #424242);
+    background: linear-gradient(to bottom, #383838, #ff9900);
     border-radius: 5px;
 }
 
@@ -193,36 +201,46 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 95%;
     text-align: center;
     cursor: pointer;
 }
 
 .container .words-box .wrap h1 {
-    color: #424242;
-}
-
-.container .words-box .wrap h1:hover {
     color: #DDDDDE;
+    font-size: 1.6em
 }
 
 .container .words-box .dropdown {
-    width: 70%;
+    width: 95%;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 .container .words-box .dropdown p {
     color: #DDDDDE;
+    font-size: 1em
 }
 
 @media screen and (max-width: 665px) {
+    .container {
+        min-height: 75vh;
+    }
     .container .buttons-card {
         padding-left: 0;
         padding-right: 0;
     }
     .container .buttons-card .button a {
         font-size: 10px;
+    }
+    .container .form {
+        width: 95%;
+    }
+    .container .form label .content-name {
+        font-size: 13px;
+    }
+    .container .form input:focus+.label-name .content-name, .container .form input:valid+.label-name .content-name {
+        font-size: 11px;
     }
     .container .words-box {
         width: 95%;
@@ -234,6 +252,6 @@
         font-size: 1.3rem;
     }
     .container .words-box .dropdown p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
