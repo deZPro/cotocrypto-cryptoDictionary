@@ -219,7 +219,7 @@
 
 .container .words-box .dropdown p {
     color: #DDDDDE;
-    font-size: 1em
+    font-size: 1.1em
 }
 
 @media screen and (max-width: 665px) {
@@ -252,6 +252,6 @@
         font-size: 1.3rem;
     }
     .container .words-box .dropdown p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }

@@ -146,7 +146,8 @@
     width: 100%;
     min-height: 45%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -154,6 +155,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 300px;
 }
 
 .Modal .modal-div .modal-qrbox .qr-code {
@@ -176,11 +178,21 @@
     letter-spacing: 1px
 }
 
-.Modal .modal-div .modal-qrbox button {
+.Modal .modal-div .modal-qrbox .btcbutton {
     margin-top: 5px;
     background: none;
     border: none;
     color: #ff9900;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.Modal .modal-div .modal-qrbox .ethbutton {
+    margin-top: 5px;
+    background: none;
+    border: none;
+    color: #62688F;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     cursor: pointer;
@@ -197,6 +209,36 @@
 
 .ReactModal__Overlay--before-close {
     opacity: 0;
+}
+
+.copied-notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    margin: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background: #DDDDDE;
+}
+
+.copied-notification span {
+    color: #212121;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 960px) {
+    .Modal .modal-div .modal-qrcode {
+        padding-top: 20px;
+        flex-direction: column;
+    }
+    .Modal .modal-div .modal-qrbox button {
+        padding-bottom: 12px;
+    }
 }
 
 @media screen and (max-width: 665px) {
@@ -232,12 +274,24 @@
     .Modal .modal-div .modal-paragraph p span {
         font-size: 1.5rem;
     }
+    .Modal .modal-div .modal-qrcode {
+        min-height: 35%;
+    }
     .Modal .modal-div .modal-qrbox .qr-code {
         max-width: 35%;
         height: auto;
     }
     .Modal .modal-div .modal-qrbox .btcadress-adress {
         font-size: 8px;
+    }
+    .copied-notification {
+        width: 100px;
+        margin: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .copied-notification span {
+        font-size: 12px;
     }
 }
 
