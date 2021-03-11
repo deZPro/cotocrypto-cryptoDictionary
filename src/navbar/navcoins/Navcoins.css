@@ -3,6 +3,13 @@
     overflow-x: auto;
     display: flex;
     align-items: center;
+    /*For Mozilla*/
+    scrollbar-width: thin;
+    scrollbar-color: #383838 #212121;
+}
+
+.navcoin-container:hover {
+    scrollbar-color: #ff9900 #212121;
 }
 
 .navcoin-container::-webkit-scrollbar {

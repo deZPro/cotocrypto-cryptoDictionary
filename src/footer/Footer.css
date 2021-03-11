@@ -66,6 +66,9 @@
     height: 100%;
     overflow: auto;
     overflow-x: hidden;
+    /*For Mozilla*/
+    scrollbar-width: thin;
+    scrollbar-color: #424242 #212121;
 }
 
 .Modal .modal-div::-webkit-scrollbar {

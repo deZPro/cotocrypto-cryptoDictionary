@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FiMail } from 'react-icons/fi'
 import { FaRegHandPeace } from 'react-icons/fa'
 import { IoLogoBitcoin } from 'react-icons/io'
@@ -18,14 +18,13 @@ function Footer() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [copiedAdress, setCopiedAdress] = useState(false);
 
-    setTimeout(() => {
-        setCopiedAdress(false);
-    }, 3000)
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setCopiedAdress(false);
+        }, 3000);
+        return () => clearTimeout(timer);
+    }, [copiedAdress]);
 
-
-    const handleCopy = () => {
-        console.log('skopiowano!');
-    }
     return (
         <div className="footer">
             <motion.span className="github-text" onClick={() => setModalIsOpen(true)}
